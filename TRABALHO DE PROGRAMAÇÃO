@@ -1,0 +1,229 @@
+i=0
+
+pin='PIN não definido '
+nome=' '
+num=' '
+cpf=' '
+endereco=' '
+emailnv=' '
+csenha=' '
+
+while i!= 5:
+	print('MENU DE CADASTRO : ')
+	print('1 - CADASTRO : ')
+	print('2 - LER: ')
+	print('3 - DELETAR :')
+	print('4- ATUALIZAR : ')
+	print('5 - SAIR: ')
+	
+	l= int (input ('Digite sua opção :'))
+	
+	if l== 1:
+		pin= (input ('Defina um pin :'))
+		nome = (input ('Nome: '))
+		num= (input ('Numero :'))
+		cpf= (input ('Cpf :'))
+		endereco= (input ( 'Endereço : '))
+		email= (input('E-mail : '))
+		emailnv= (input('Confirma Email : '))
+		
+		if emailnv != email :
+			print('E-mail incorreto.')
+			print('Ao errar de novo,voltará ao sistema de menu')
+			emailnv = (input('Rescreva o E-mail : '))
+			if emailnv == email :
+				print('E-mail correto')
+				senha= (input ('Defina uma senha :'))
+				csenha= (input ('Confirma senha : '))
+				if csenha != senha:
+					print('Senha incorreta : ')
+					csenha= (input ('Rescreva a senha :'))
+				else :
+					print('Senha correta')
+			else:
+			    print('E-mail incorreto')
+		else :
+			print('E-mail correto')
+			senha= (input ('Defina uma senha :'))
+			csenha= (input ('Confirma senha : '))
+			if csenha != senha:
+			    print('Senha incorreta : ')
+			    csenha= (input ('Rescreva a senha :'))
+			else :
+			    print('Senha correta')
+	
+	elif l==2 :
+		cpin= (input ('Digite seu pin : '))
+		
+		if pin != cpin :
+			print('Pin incorreto, voltando para menu :')
+		else :
+			print('Nome: ',nome)
+			print('Número: ',num)
+			print('Cpf: ',cpf)
+			print('Endereço: ',endereco)
+			print('Email: ',emailnv)
+			print('Senha: ',csenha)
+	
+	elif l==3 :
+		print('Deseja deletar dados : ')
+		print('1-Sim')
+		print('2-Não')
+		
+		o= int (input ('Digite sua opção:'))
+		
+		if o== 2 :
+			print('Sistema recuperado')
+		else :
+		    print("Qual campo quer deletar : ")
+		    print("1- Nome ")
+		    print("2- Numero ")
+		    print("3- CPF ")
+		    print("4- Endereço ")
+		    print("5- E-mail; ")
+		    print("6- Senha; ")
+		    print("7- Todos os campos; ")
+		    
+		    a = int(input("Digite sua opção: "))
+		    
+		    if a==1:
+			    nome = (input("Nome: "))
+		    elif a==2:
+			    endereco = (input("Numero: "))
+		    elif a==3:
+			    celular = (input("CPF: "))
+		    elif a==4:
+			    cpf = (input("Endereço: "))
+		    elif a==5:
+			    email = (input("E-mail: "))
+		    elif a==6:
+			    senha=(input ("Senha : "))
+		    elif a==7:
+			    print('Fazer novo cadastro : ')
+			    nome = (input ('Nome: '))
+			    num= (input ('Numero :'))
+			    cpf= (input ('Cpf :'))
+			    endereco= (input ( 'Endereço : '))
+			    email= (input('E-mail : '))
+			    emailnv= (input('Confirma Email : '))
+			    
+			    if emailnv != email :
+			        print('E-mail incorreto.')
+			        emailnv = (input('Rescreva o E-mail : '))
+			        if emailnv == email :
+			            print('E-mail correto')
+			            senha= (input ('Defina uma senha :'))
+			            csenha= (input ('Confirma senha : '))
+			            if csenha != senha:
+			                print('Senha incorreta : ')
+			                csenha= (input ('Rescreva a senha :'))
+			            else :
+			                print('Senha correta')
+			        else :
+			            print('E-mail incorreto')
+			    else :
+			        print('E-mail correto')
+			        senha= (input ('Defina uma senha :'))
+			        csenha= (input ('Confirma senha : '))
+			        if csenha != senha:
+			            print('Senha incorreta : ')
+			            csenha= (input ('Rescreva a senha :'))
+			        else :
+			            print('Senha correta')
+		    else :
+		        print('Nenhum dado excluido')
+	elif l== 4 :
+	    print(nome)
+	    print(num)
+	    print(cpf)
+	    print(endereco)
+	    print(emailnv)
+	    print('*******')
+	    
+	    print('Qual campo você quer atualizar :')
+	    print('1 - Nome')
+	    print('2 - Numero')
+	    print('3 - Cpf')
+	    print('4 - Endereço')
+	    print('5 - E-mail')
+	    print('6 - Senha')
+	    print('7 - Trocar todos os dados')
+	    print('8 - Voltar ao menu prncipal')
+	    
+	    a = int (input('Digite sua opcão :'))
+	    
+	    if a== 1 :
+	        nome= (input ('Digite seu nome :'))
+	    elif a== 2 :
+	        num= (input ('Digite seu número'))
+	    elif a== 3 :
+	        cpf= (input ('Cpf :'))
+	    elif a== 4 :
+	        endereco= (input ( 'Endereço :  ')) 
+	    elif a== 5 :
+	        email= (input('E-mail : '))
+	        emailnv= (input('Confirma Email : '))
+	        if emailnv != email :
+	            print('E-mail incorreto.')
+	            emailnv = (input('Rescreva o E-mail : '))
+	            if emailnv == email :
+	                print('E-mail correto')
+	    elif a== 6 :
+	        senha= (input ('Defina uma senha :'))
+	        csenha= (input ('Confirma senha : '))
+	        if csenha != senha:
+	            print('Senha incorreta : ')
+	            csenha= (input ('Rescreva a senha :'))
+	        else :
+	            print('Senha correta')
+	    elif a== 7 :
+	        print('Atualização de dados :')
+	        nome = (input ('Nome: '))
+	        num= (input ('Numero :'))
+	        cpf= (input ('Cpf :'))
+	        endereco= (input ( 'Endereço : '))
+	        email= (input('E-mail : '))
+	        emailnv= (input('Confirma Email : '))
+	        
+	        if emailnv != email :
+	        	print('E-mail incorreto.')
+	        	print('Ao errar de novo,voltará ao sistema de menu')
+	        	emailnv = (input('Rescreva o E-mail : '))
+	        	if emailnv == email :
+	        		print('E-mail correto')
+	        		senha= (input ('Defina uma senha :'))
+	        		csenha= (input ('Confirma senha : '))
+	        		if csenha != senha:
+	        			print('Senha incorreta : ')
+	        			csenha= (input ('Rescreva a senha :'))
+	        		else :
+	        			print('Senha correta')
+	        	else:
+	        		print('E-mail incorreto')
+	        else :
+	        	print('E-mail correto')
+	        	senha= (input ('Defina uma senha :'))
+	        	csenha= (input ('Confirma senha : '))
+	        	if csenha != senha:
+	        		print('Senha incorreta : ')
+	        		csenha= (input ('Rescreva a senha :'))
+	        	else :
+	        		print('Senha correta')
+	        		
+	    else :
+	        prit('Voltando ao menu')
+	
+	elif l==5:
+			print("\nDeseja sair? ")
+			print("1- Sim")
+			print("2- Não")
+			
+			z= int(input("Digite sua opção: "))
+			
+			if z==1:
+				print("\nVocê saiu do sistema. ")
+				i=5
+			if z>5:
+				print('MENU DE CADASTRO: ')
+	else :
+	    print('Opção inválida')
